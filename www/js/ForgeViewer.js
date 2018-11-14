@@ -257,6 +257,7 @@ if(!graph1shown){
     },500);
     smoothie.addTimeSeries(line1);
     graph1shown = true;
+    $('.yt_video').show();
 }
 
     }else if(num == 2){
