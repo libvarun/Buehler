@@ -28,6 +28,7 @@
     <!-- BIM360 packages: login and authentication -->
     <!-- <script src="/js/oauth.js"></script> -->
     <script src="/js/ForgeViewer.js"></script>
+    <script src="/js/ForgeViewer1.js"></script>
     <script src="/js/gallery.js"></script>
 
 </head>
@@ -61,7 +62,7 @@
     <!-- END Category list -->
 
     <!-- START Viewer -->
-    <!-- <div class="models_list"> < Back to Models</div> -->
+    <div class="models_list"> < Back to Models</div>
     <div class="viewer_container">
         
             <div id="forgeViewer"></div>
@@ -98,6 +99,7 @@
                                      <div class="yt_video">
                                         <iframe width="445" height="270" src="https://www.youtube.com/embed/ARb1eGT06Hw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                      </div>
+                                     <img style="width:445px;" class="circuit_img" src="./img/Maschinenzeichnung.png" />
                                   </div>
                                </div>
                             </div>
@@ -105,6 +107,20 @@
             </div>
         
         
+    </div>
+    <div class="viewer_container1">
+        <div class="viewer-group">
+            <div class="project-container group">
+                <div id="forgeViewer1"></div>
+            </div>
+            <div class="project-container group">
+                <div id="forgeViewer2"></div>
+            </div>
+        </div>
+        <div class="project-info-column">
+            <div id="chart_container" style="width: 100%;height: 324px;"></div>
+            <img class="circuit" src="https://help.autodesk.com/cloudhelp/2019/ENU/Plant3D-UserGuide/images/GUID-3375B328-D3E9-4251-80D1-9B8A31B72221.png" />
+        </div>
     </div>
     <!-- END Viewer -->
 
@@ -139,6 +155,8 @@
         baguetteBox.run('.tz-gallery');
     </script>
 
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
 </body>
 
 </html>

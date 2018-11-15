@@ -23,7 +23,7 @@ module.exports = {
   // Autodesk Forge configuration
 
   // this this callback URL when creating your client ID and secret
-  callbackURL: process.env.FORGE_CALLBACK_URL || process.env.FORGE_CALLBACK || 'http://localhost:3000/api/forge/callback/oauth',
+  callbackURL: process.env.FORGE_CALLBACK_URL || process.env.FORGE_CALLBACK || '<<YOUR CALLBACK URL FROM FORGE DEVELOPER PORTAL>>',
 
   // set enviroment variables or hard-code here
   credentials: {

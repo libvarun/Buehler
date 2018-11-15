@@ -18,17 +18,18 @@
 
 $(document).ready(function() {
 
-    var items = ['dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YnVlaGxldmFydW4xL2ludmVudG9yLnppcA']
+    var items = [{'name':'inventor','urn':'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YnVlaGxldmFydW4xL2ludmVudG9yLnppcA',},
+        {'name':'STD_MILL','urn':'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YnVlaGxlcnZhcnVuL19TVERfTUlMTF8yLnppcA'}]
     appendItems(items);
     
     function appendItems(items) {
         var template = '';
         for (var i = 0; i < items.length; i++) {
-            var params = encodeURIComponent(items[i]);
+            var params = encodeURIComponent(items[i].urn);
             template += '<div data-index="' + i + '" class="col-sm-6 col-md-4 category">' +
                 '<div class="thumbnail">' +
                 '<img src="' + location.protocol + '//' + location.host + location.pathname + 'thumbnails/?id=' + params + '" >' +
-                '<div class="caption">' +
+                '<div class="caption">' +items[i].name+
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -36,18 +37,26 @@ $(document).ready(function() {
         $('.categories_list').html(template);
         $('.category').click(viewItem);
         $('.loader').hide();
-        $('.category').click();
+        // $('.category').click();
     }
 
     function viewItem() {
         var index = parseInt($(this).attr('data-index'));
-        launchViewer(items[index])
-        $('.gallery-container').hide();
-        $('.viewer_container').show();
+        if (index == 0) {
+            launchViewer(items[index].urn)
+            $('.gallery-container').hide();
+            $('.viewer_container').show();            
+        } else {
+            launchViewer1(items[index].urn)
+            // launchViewer2(items[index].urn)
+            $('.gallery-container').hide();
+            $('.viewer_container1').show(); 
+        }
+        $('.models_list').show();
     }
     $('.models_list').click(function(){
         $('.gallery-container').show();
-        $('.viewer_container').hide();
+        $('.viewer_container,.viewer_container1,.models_list').hide();
     });
     
 });

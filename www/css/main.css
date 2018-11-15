@@ -17,7 +17,7 @@ body {
 .category {
     cursor: pointer;
 }
-.models_list{cursor: pointer;font-size: 20px;/* margin-left: 20%; */margin-top: 56px;}
+.models_list{cursor: pointer;font-size: 20px;/* margin-left: 20%; */margin-top: 56px;display: none;}
 .modal-header,.modal-body{text-align: center;}
 .add_urn{margin-top: 20px;}
 .status_msg{color: red;}
@@ -118,3 +118,33 @@ body {
 }
 
 .yt_video{display: none;}
+.section{display: inline-block;width: 500px;height: 500px;}
+.viewer-group {
+    height: 100vh;
+    width: 60%;
+    position: fixed;
+}
+.project-container {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background: url(../images/loader.gif) no-repeat center;
+    border-right: 1px solid #bbb;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.group:before, .group:after {
+    content: " ";
+    display: table;
+}
+
+.project-info-column {
+    padding: 20px 0 10px;
+    float: right;
+    width: 40%;
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    box-sizing: border-box;
+}
+.circuit,.circuit_img{display: none;    margin-top: 77px;}

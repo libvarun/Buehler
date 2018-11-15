@@ -258,9 +258,12 @@ if(!graph1shown){
     smoothie.addTimeSeries(line1);
     graph1shown = true;
     $('.yt_video').show();
+        $('.circuit_img').hide();
 }
 
     }else if(num == 2){
+        $('.yt_video').hide();
+        $('.circuit_img').show();
         // nav.setPosition(pushpins[1])
         var dbid = [1618]
         viewer.fitToView(dbid, viewer.model)
